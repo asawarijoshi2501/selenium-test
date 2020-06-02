@@ -10,12 +10,12 @@ browser.get('https://asawarijoshi2501.github.io/selenium-test/')
 
 print("Test case 1 : find if element by id 'about' exists")
 search_form = browser.find_element_by_id('about')
-assert(search_form):
+assert(search_form)
 
 
 print("Test case 1 : find if element by id 'image' exists")
 search_form = browser.find_element_by_id('image')
-assert(search_form):
+assert(search_form)
 
 
 
