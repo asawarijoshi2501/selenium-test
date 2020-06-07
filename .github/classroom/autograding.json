@@ -5,7 +5,7 @@
       "setup": "export PATH=\"/home/runner/.local/bin:$PATH\"; export PATH=\"/usr/local/bin:$PATH\"; pip3 install requests==2.22.0; pip3 install selenium==3.141.0;pip3 install flake8;flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics;flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics; sudo -H pip3 install pytest; pip3 install pytest-html",
       "run": "pytest --html=report.html --self-contained-html --verbose --capture=sys --log-level=ERROR test.py",
       "input": "",
-      "output": "report.html",
+      "output": "/home/runner/work/selenium-test/selenium-test/report.html",
       "comparison": "included",
       "timeout": 10,
       "points": 10
