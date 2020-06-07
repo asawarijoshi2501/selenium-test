@@ -1,14 +1,12 @@
 name: GitHub Classroom Workflow
 
-    on: [push]
+on: [push]
 
-    jobs:
+jobs:
       build:
         name: Autograding
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
           - uses: education/autograding@v1
-            env: 
-                repo_name: ${{ github.repository }} 
-                run: export repo_name=$repo_name
+        
