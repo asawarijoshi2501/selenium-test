@@ -52,7 +52,7 @@ class TestTemplate(unittest.TestCase):
             for paragraph in elem_paras:
                 para_list = para_list+list(paragraph.text)
             Letter_count = len(para_list)
-            assert(Letter_count >= 100000)
+            assert(Letter_count >= 100)
         except NoSuchElementException as ex:
             self.fail(ex.msg)
     def test_case_4(self):
