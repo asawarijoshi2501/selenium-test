@@ -2,8 +2,8 @@
   "tests": [
     {
       "name": "html-testing",
-      "setup": "export PATH=\"/home/runner/.local/bin:$PATH\"; export PATH=\"/usr/local/bin::$PATH\";python -m pip install --upgrade pip; pip install pytest; pip install pytest-html; pip install requests==2.22.0; pip install selenium==3.141.0;pip install flake8;flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics;flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics",
-      "run": "pytest test.py  --html=report.html --self-contained-html --verbose --capture=sys --log-level=ERROR",
+      "setup": "export PATH=\"/home/runner/.local/bin:$PATH\"; export PATH=\"/usr/local/bin:$PATH\";python -m pip install --upgrade pip; pip install pytest; pip install pytest-html; pip install requests==2.22.0; pip install selenium==3.141.0;pip install flake8;flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics;flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics",
+      "run": "/usr/local/bin/pytest test.py  --html=report.html --self-contained-html --verbose --capture=sys --log-level=ERROR",
       "input": "",
       "output": "report.html",
       "comparison": "included",
