@@ -23,7 +23,7 @@ class TestTemplate(unittest.TestCase):
         self.driver.quit()
 
     def test_case_1(self):
-        """TESTCASE 1 : TEST IF 'about' ELEMENT EXISTS"""
+        print("TESTCASE 1 : TEST IF 'about' ELEMENT EXISTS")
         try:
             about=[]
             self.driver.get(url)
@@ -36,14 +36,14 @@ class TestTemplate(unittest.TestCase):
             self.fail(ex.msg)
 
     def test_case_2(self):
-        """TESTCASE 2 : TEST IF 'img' ELEMENT EXISTS"""
+        print("TESTCASE 2 : TEST IF 'img' ELEMENT EXISTS")
         try:
             self.driver.get(url)
             elem_img = self.driver.find_element_by_tag_name('img')        
         except NoSuchElementException as ex:
             self.fail(ex.msg)
     def test_case_3(self):
-        """TESTCASE 3 : FIND IF MULTIPLE PARAGRAPHS EXISTS WITH 100 CHARACTERS AT LEAST"""
+        print ("TESTCASE 3 : FIND IF MULTIPLE PARAGRAPHS EXISTS WITH 100 CHARACTERS AT LEAST")
         try:
             self.driver.get(url)
             elem_paras = self.driver.find_elements_by_css_selector('p') 
@@ -56,7 +56,7 @@ class TestTemplate(unittest.TestCase):
         except NoSuchElementException as ex:
             self.fail(ex.msg)
     def test_case_4(self):
-        """TESTCASE 4: FIND 2 LINKS TO 2 BLOG POSTS"""
+        print ("TESTCASE 4: FIND 2 LINKS TO 2 BLOG POSTS")
         try:
             self.driver.get(url)
             elems = self.driver.find_elements_by_css_selector('a')
@@ -69,7 +69,7 @@ class TestTemplate(unittest.TestCase):
         except NoSuchElementException as ex:
             self.fail(ex.msg)
     def test_case_5(self):
-        """TESTCASE 5: BLOG ONE HEADING SHOULD CONTAIN 'this course xxx'"""
+        print("TESTCASE 5: BLOG ONE HEADING SHOULD CONTAIN 'this course xxx'")
         try:
             self.driver.get(url)
             elems = self.driver.find_elements_by_css_selector('a')
@@ -85,7 +85,7 @@ class TestTemplate(unittest.TestCase):
             self.fail(ex.msg)  
 
     def test_case_6(self):
-        """TESTCASE 6: BLOG ONE CONTAINS PARAGRAPHS OR UNORDERED LIST , WORD LIMIT : 250-500"""
+        print("TESTCASE 6: BLOG ONE CONTAINS PARAGRAPHS OR UNORDERED LIST , WORD LIMIT : 250-500")
         try:
             self.driver.get(url)
             elems = self.driver.find_elements_by_css_selector('a')
@@ -110,7 +110,7 @@ class TestTemplate(unittest.TestCase):
             self.fail(ex.msg)  
     
     def test_case_7(self):
-        """TESTCASE 8: BLOG TWO HEADING SHOULD CONTAIN 'learned xxx'"""
+        print("TESTCASE 7: BLOG TWO HEADING SHOULD CONTAIN 'learned xxx'")
         try:
             self.driver.get(url)
             elems = self.driver.find_elements_by_css_selector('a')
@@ -126,7 +126,7 @@ class TestTemplate(unittest.TestCase):
             self.fail(ex.msg)  
 
     def test_case_8(self):
-        """TESTCASE 8: BLOG TWO CONTAINS PARAGRAPHS OR UNORDERED LIST , WORD LIMIT : 250-500"""
+        print("TESTCASE 8: BLOG TWO CONTAINS PARAGRAPHS OR UNORDERED LIST , WORD LIMIT : 250-500")
         try:
             self.driver.get(url)
             elems = self.driver.find_elements_by_css_selector('a')
@@ -155,3 +155,7 @@ url="https://asawarijoshi2501.github.io/selenium-test/"
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestTemplate)
     unittest.TextTestRunner(verbosity=2).run(suite)
+
+    
+ 
+ 
